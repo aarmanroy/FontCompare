@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font Compare Tool</title>
+    <!-- Load p5.js from CDN for canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <style>
+        body { margin: 0; display: flex; height: 100vh; }
+        #fontCanvas { flex: 4; background: #f0f0f0; }
+        .toolbar { flex: 1; padding: 20px; background: #fff; }
+    </style>
+</head>
+<body>
+    <div id="fontCanvas"></div>
+    <div class="toolbar">
+        <p>Toolbar goes here</p>
+    </div>
+    <script>
+        function setup() {
+            let canvas = createCanvas(windowWidth * 0.8, windowHeight);
+            canvas.parent('fontCanvas');
+        }
+        function draw() {
+            background(240); // Light gray background
+            fill(0); // Black text
+            textSize(48);
+            text("Hello, World!", 50, height / 2);
+        }
+    </script>
+</body>
+</html>
